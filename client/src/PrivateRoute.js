@@ -6,6 +6,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
         if (localStorage.getItem('token')){
             return <Component {...props} />
         } else {
+            console.log('no token found')
             return <Redirect to='/login' />
         }
     }}
